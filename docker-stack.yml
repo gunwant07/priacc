@@ -1,0 +1,12 @@
+services:
+  backend:
+    image: app
+    ports:
+      - target: 5173
+        published: 5173
+        protocol: tcp
+        mode: host
+    deploy:
+      replicas: 1
+      restart_policy:
+        condition: on-failure
